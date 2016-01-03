@@ -1,8 +1,12 @@
 # Used by ifup(8) and ifdown(8). See the interfaces(5) manpage or
 # /usr/share/doc/ifupdown/examples for more information.
 
-auto lo eth0
+auto lo eth0 usb0
 
 iface lo inet loopback
 
 iface eth0 inet dhcp
+
+iface usb0 inet static
+	address 10.10.10.10
+	netmask 255.255.255.0

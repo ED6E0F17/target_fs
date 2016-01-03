@@ -11,17 +11,7 @@
 #
 # By default this script does nothing.
 
-_setup_led()
-{   local dev=/sys/class/leds/$1
-    if [ -d $dev ]; then
-       echo $2 | sudo tee $dev/trigger
-       echo $3 | sudo tee $dev/device_name
-       echo $4 | sudo tee $dev/mode
-    fi
-}
-
-_setup_led led6 netdev eth6 tx
-_setup_led led7 netdev eth7 rx
-_setup_led led7 netdev eth8 link
+local dev=/sys/class/leds/led0
+echo heartbeat > $dev/trigger
 
 exit 0

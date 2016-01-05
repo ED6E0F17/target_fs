@@ -1,8 +1,11 @@
 #! /bin/sh
 
+# mount /proc and /sys from fstab
+/bin/mount -a
+
+# mount /dev and /boot
 echo /sbin/mdev >/proc/sys/kernel/hotplug
 /sbin/mdev -s
-/bin/mount -a
 
 /sbin/syslogd -C # circular buffer - use logread to read
 /sbin/klogd      # log kernel messages - also available in dmesg
@@ -12,6 +15,8 @@ echo /sbin/mdev >/proc/sys/kernel/hotplug
 echo
 echo Greetings from standalone Raspberry Pi
 echo
+
+sh /etc/rc.local 
 
 # use an artificial SysRq-g to interrupt
 # echo Attempting to enter the debugger! ....

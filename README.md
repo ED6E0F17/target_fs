@@ -11,5 +11,4 @@ You want these in .config to build this into a kernel:
 or build a ram disk with:
 
     cd target_fs
-    find . | cpio --create --'format=newc' | gzip >../ramdisk.img
-
+    find . |sed s/.*git.*// |grep . |cpio -o --'format=newc' |gzip >../ramdisk.img

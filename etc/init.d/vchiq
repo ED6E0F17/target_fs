@@ -11,7 +11,7 @@
 #                    It is called from the boot script.
 ### END INIT INFO
 
-PATH=/sbin:/usr/sbin:/bin:/usr/bin
+PATH=/sbin:/bin
 
 if ! type log_action_begin_msg > /dev/null 2>&1; then
     log_action_begin_msg() { echo "$@"; }

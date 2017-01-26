@@ -11,7 +11,6 @@
 #
 # By default this script does nothing.
 
-local dev=/sys/class/leds/led0
-echo heartbeat > $dev/trigger
+echo heartbeat > /sys/class/leds/led0/trigger
 
 exit 0

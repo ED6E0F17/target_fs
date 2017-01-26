@@ -7,11 +7,12 @@
 echo /sbin/mdev >/proc/sys/kernel/hotplug
 /sbin/mdev -s
 
-/sbin/syslogd -C # circular buffer - use logread to read
-/sbin/klogd      # log kernel messages - also available in dmesg
+#/sbin/syslogd -C # circular buffer - use logread to read
+#/sbin/klogd      # log kernel messages - also available in dmesg
 
 # create vchiq device
-[ -x /etc/init.d/vchiq ] && /etc/init.d/vchiq start
+# [ -x /etc/init.d/vchiq ] && /etc/init.d/vchiq start
+
 echo
 echo Greetings from standalone Raspberry Pi
 echo

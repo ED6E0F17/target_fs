@@ -13,4 +13,7 @@
 
 echo heartbeat > /sys/class/leds/led0/trigger
 
+# ifup usb0
+# telnetd -l /bin/sh
+
 exit 0

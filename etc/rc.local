@@ -13,7 +13,9 @@
 
 echo heartbeat > /sys/class/leds/led0/trigger
 
-ifup usb0
-telnetd -l /bin/sh
+#ifup usb0
+#telnetd -l /bin/sh
+
+echo "/dev/mmcblk0p1" >/sys/devices/platform/soc/20980000.usb/gadget/lun0/file
 
 exit 0

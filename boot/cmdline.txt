@@ -1,1 +1,1 @@
-coherent_pool=16M cma=128 root=/dev/ram0 rootwait init=/init console=tty0
+root=/dev/ram0 rootwait init=/init console=serial0 g_acm_ms.removable=1

@@ -1,0 +1,4 @@
+dd bs=1M count=16 if=/dev/zero of=/ramdisk
+mkfs.vfat /ramdisk
+modprobe dwc2
+modprobe g_mass_storage file=/ramdisk

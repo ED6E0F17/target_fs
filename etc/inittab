@@ -2,3 +2,4 @@
 ::respawn:-/bin/sh
 ::ctrlaltdel:/bin/umount -a -r
 #ttyGS0::respawn:/sbin/getty -n -l /bin/sh ttyGS0 9600 vt100
+ttyGS0::once:/sbin/getty -n -l /bin/sh ttyGS0 9600 vt100
